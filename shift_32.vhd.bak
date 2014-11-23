@@ -1,0 +1,72 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.eecs361.all;
+use work.eecs361_gates.all;
+
+entity shift_32 is
+    port (
+        A   : in std_logic_vector(31 downto 0);
+        B   : in std_logic_vector(31 downto 0);
+        R   : out std_logic_vector(31 downto 0);
+        mux0: out std_logic_vector(47 downto 0);
+        mux1: out std_logic_vector(47 downto 0);
+        mux2: out std_logic_vector(47 downto 0);
+        mux3: out std_logic_vector(47 downto 0);
+        mux4: out std_logic_vector(31 downto 0);
+        A_x : out std_logic_vector(31 downto 0);
+        tst: out std_logic
+    );
+end shift_32;
+
+
+architecture structural of shift_32 is
+    signal A_ext: std_logic_vector(63 downto 0);
+    signal sll_mux0, sll_mux1, sll_mux2, sll_mux3: std_logic_vector(47 downto 0);
+    signal sll_mux4: std_logic_vector(31 downto 0);
+    
+    signal test: std_logic_vector(26 downto 0);      -- to test if B is greater than 31 (27 most significant bits)
+    
+    begin
+        A_ext(63 downto 32) <= A;
+        A_ext(31 downto 0) <= "00000000000000000000000000000000";
+        
+        -- first level mux (shift 1 difference)
+        sll_mux0_map: mux_32 port map (sel => B(0), src0 => A, src1 => A_ext(62 downto 31), z => sll_mux0(47 downto 16));
+        sll_mux0(15 downto 0) <= "0000000000000000";
+        
+        -- second (shift 2)
+        sll_mux1_map: mux_32 port map (sel => B(1), src0 => sll_mux0(47 downto 16), src1 => sll_mux0(45 downto 14), z => sll_mux1(47 downto 16));
+        sll_mux1(15 downto 0) <= "0000000000000000";
+        
+        -- third (shift 4)
+        sll_mux2_map: mux_32 port map (sel => B(2), src0 => sll_mux1(47 downto 16), src1 => sll_mux1(43 downto 12), z => sll_mux2(47 downto 16));
+        sll_mux2(15 downto 0) <= "0000000000000000";
+        
+        -- fourth (shift 8)
+        sll_mux3_map: mux_32 port map (sel => B(3), src0 => sll_mux2(47 downto 16), src1 => sll_mux2(39 downto 8), z => sll_mux3(47 downto 16));
+        sll_mux3(15 downto 0) <= "0000000000000000";
+        
+        -- final level (shift 16)
+        sll_mux4_map: mux_32 port map (sel => B(4), src0 => sll_mux3(47 downto 16), src1 => sll_mux3(31 downto 0), z => sll_mux4);
+        
+    
+        -- then check if there are 1's in any higher bit positions
+        test(0) <= B(5);
+    
+        gen_test: for i in 1 to 26 generate
+            test_i: or_gate port map (x => B(i+5), y => test(i-1), z => test(i));
+        end generate;
+    
+        res_map: mux_32 port map (sel => test(26), src0 => sll_mux4, src1 => A_ext(31 downto 0), z => R);
+    
+    
+        
+  mux0 <= sll_mux0;
+  mux1 <= sll_mux1;
+  mux2 <= sll_mux2;
+  mux3 <= sll_mux3;
+  mux4 <= sll_mux4;
+  tst <= test(26);
+  A_x <= a_ext(31 downto 0);
+        
+end structural; 

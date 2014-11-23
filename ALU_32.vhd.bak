@@ -1,0 +1,118 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.eecs361.all;
+use work.eecs361_gates.all;
+
+entity ALU_32 is
+    port (
+        ctrl: in std_logic_vector(4 downto 0);
+        A   : in std_logic_vector(31 downto 0);
+        B   : in std_logic_vector(31 downto 0);
+        cout: out std_logic;
+        R   : out std_logic_vector(31 downto 0);
+        ovf : out std_logic;
+        zf  : out std_logic
+    );
+end ALU_32;
+
+architecture structural of ALU_32 is
+    component ALU_1 port (
+        ctrl: in std_logic_vector(1 downto 0);
+        A   : in std_logic;
+        B   : in std_logic;
+        cin : in std_logic;
+        cout: out std_logic;
+        R   : out std_logic
+    );
+    end component;
+    
+    component shift_32 port (
+        A   : in std_logic_vector(31 downto 0);
+        B   : in std_logic_vector(31 downto 0);
+        R   : out std_logic_vector(31 downto 0)
+    );
+    end component;
+    
+    -- signals for arithmetic and logic
+    signal carry: std_logic_vector(31 downto 0);
+    signal alu_r: std_logic_vector(31 downto 0);
+    
+    -- signals for overflow
+    signal addu_overflow, subu_overflow: std_logic;
+    
+    -- signals for slt and sltu
+    signal overflow, signed_overflow, unsigned_overflow: std_logic;
+    signal slt_bit, sltu_bit, cout_neg: std_logic;
+    signal slt_r: std_logic_vector(31 downto 0);
+    
+    -- signal for sll
+    signal sll_r: std_logic_vector(31 downto 0);
+    
+    -- signals for mux
+    signal alusll: std_logic_vector(31 downto 0);
+    signal result: std_logic_vector(31 downto 0);
+    
+    -- signal for detecting zero
+    signal test: std_logic_vector(31 downto 0);
+    signal zero: std_logic;
+    
+    
+    begin
+        -- create 32 bit ALU
+        alu_0: ALU_1 port map (ctrl => ctrl(2 downto 1), 
+                               A => A(0), 
+                               B => B(0), 
+                               cin => ctrl(1), 
+                               cout => carry(0), 
+                               R => alu_r(0));
+        
+        gen_alu: for i in 1 to 31 generate
+           alu_i: ALU_1 port map (ctrl => ctrl(2 downto 1), 
+                                  A => A(i), 
+                                  B => B(i), 
+                                  cin => carry(i-1), 
+                                  cout => carry(i), 
+                                  R => alu_r(i));
+        end generate;
+        
+        -- detect overflow
+        addu_overflow <= carry(31);
+        subu_ovf_map: not_gate port map (x => carry(31), z => subu_overflow);
+        
+        unsigned_ovf_map: mux port map (sel => ctrl(1), src0 => addu_overflow, src1 => subu_overflow, z => unsigned_overflow);
+        signed_ovf_map: xor_gate port map (x => carry(30), y => carry(31), z => signed_overflow);
+    
+        ovf_mux: mux port map(sel => ctrl(0), src0 => signed_overflow, src1 => unsigned_overflow, z => overflow);
+        
+        
+        -- logic for slt and sltu
+        slt_bit_map: xor_gate port map (x => overflow, y => alu_r(31), z => slt_bit);
+        sltu_bit <= unsigned_overflow;
+        slt_map: mux port map (sel => ctrl(3), src0 => slt_bit, src1 => sltu_bit, z => slt_r(0));
+        slt_r(31 downto 1) <= "0000000000000000000000000000000";
+        
+        
+        sll_map: shift_32 port map (A => A, B => B , R => sll_r);
+        
+        
+        -- connect the muxes pick the correct result
+        mux_map0: mux_32 port map (sel => ctrl(3), src0 => alu_r, src1 => sll_r, z => alusll);
+        mux_map1: mux_32 port map (sel => ctrl(4), src0 => alusll, src1 => slt_r, z => result); 
+        
+        
+        -- now detect zero
+        test(0) <= result(0);
+    
+        gen_test: for i in 1 to 31 generate
+            test_i: or_gate port map (x => result(i), y => test(i-1), z => test(i));
+        end generate;
+
+        zero_map: not_gate port map (x => test(31), z => zero);
+        
+        -- connect to output ports
+        R <= result;
+        cout <= carry(31);
+        ovf <= overflow;
+        zf <= zero;
+        
+end structural;

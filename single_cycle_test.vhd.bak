@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.eecs361.all;
+use work.eecs361_gates.all;
+
+entity single_cycle_test is
+end single_cycle_test;
+
+architecture arch of single_cycle_test is
+  
+  component single_cycle is
+    generic (
+        prog: string;
+        PC_init: std_logic_vector(31 downto 0)
+    );
+    
+    port (
+        clk: in std_logic;
+        rst: in std_logic -- reset on low
+    );
+end component;
+  
+  signal clk, rst: std_logic;
+  
+  begin
+    cpu_map : single_cycle
+    generic map (
+      prog => "sort.dat",
+      PC_init => x"0040001c")
+    port map (clk => clk, rst => rst);
+      
+    process 
+    begin
+    
+    clk <= '1';
+    rst <= '0';
+    wait for 5 ns;
+    clk <= '0';
+    clk <= '1';  
+    rst <= '1';
+    clk <= '0';
+    wait for 5 ns;
+    
+    for i in 0 to 2000 loop
+      clk <= '1';
+      wait for 5 ns;
+      clk <= '0';
+      wait for 5 ns;
+    end loop;
+    
+    wait;
+  end process;
+end arch;
+    
+

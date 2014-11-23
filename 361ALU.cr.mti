@@ -1,0 +1,488 @@
+/home/khq334/361/register_file_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/register_file_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_file_test
+-- Compiling architecture arch of register_file_test
+
+} {} {}} /home/khq334/361/signext16_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/signext16_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity signext16_32
+-- Compiling architecture structural of signext16_32
+
+} {} {}} /home/khq334/361/xor_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/xor_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate_32
+-- Compiling architecture dataflow of xor_gate_32
+
+} {} {}} /home/khq334/361/eecs361_gates.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/eecs361_gates.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling package eecs361_gates
+
+} {} {}} /home/khq334/361/csram.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/csram.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Loading package numeric_std
+-- Compiling entity csram
+-- Compiling architecture behavioral of csram
+
+} {} {}} /home/khq334/361/not_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/not_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity not_gate_n
+-- Compiling architecture dataflow of not_gate_n
+
+} {} {}} /home/khq334/361/or_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/or_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity or_gate
+-- Compiling architecture dataflow of or_gate
+
+} {} {}} /home/khq334/361/dffr.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/dffr.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity dffr
+-- Compiling architecture behavioral of dffr
+
+} {} {}} /home/khq334/361/cache_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/cache_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity cache_test
+-- Compiling architecture mix of cache_test
+
+} {} {}} /home/khq334/361/arraytypes.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/arraytypes.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling package arraytypes
+
+} {} {}} /home/khq334/361/nand_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/nand_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate_32
+-- Compiling architecture dataflow of nand_gate_32
+
+} {} {}} /home/khq334/361/or_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/or_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity or_gate_n
+-- Compiling architecture dataflow of or_gate_n
+
+} {} {}} /home/khq334/361/xnor_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/xnor_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity xnor_gate
+-- Compiling architecture dataflow of xnor_gate
+
+} {} {}} /home/khq334/361/fulladder32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/fulladder32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity fulladder32
+-- Compiling architecture structural of fulladder32
+
+} {} {}} /home/khq334/361/and_6to1.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/and_6to1.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity and_6to1
+-- Compiling architecture structural of and_6to1
+
+} {} {}} /home/khq334/361/nor_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/nor_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate_n
+-- Compiling architecture dataflow of nor_gate_n
+
+} {} {}} /home/khq334/361/ALU_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/ALU_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity alu_32
+-- Compiling architecture structural of alu_32
+
+} {} {}} /home/khq334/361/mux_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/mux_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux_32
+-- Compiling architecture structural of mux_32
+
+} {} {}} /home/khq334/361/fulladder_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/fulladder_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity fulladder_n
+-- Compiling architecture behavioral of fulladder_n
+
+} {} {}} /home/khq334/361/ALU_1_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/ALU_1_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity alu_1_test
+-- Compiling architecture structural of alu_1_test
+
+} {} {}} /home/khq334/361/dec_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/dec_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity dec_n
+-- Compiling architecture behavioral of dec_n
+
+} {} {}} /home/khq334/361/ALU_1.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/ALU_1.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity alu_1
+-- Compiling architecture structural of alu_1
+
+} {} {}} /home/khq334/361/fulladder_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/fulladder_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity fulladder_test
+-- Compiling architecture structural of fulladder_test
+
+} {} {}} /home/khq334/361/nor_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/nor_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate_32
+-- Compiling architecture dataflow of nor_gate_32
+
+} {} {}} /home/khq334/361/and_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/and_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity and_gate
+-- Compiling architecture dataflow of and_gate
+
+} {} {}} /home/khq334/361/not_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/not_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity not_gate_32
+-- Compiling architecture dataflow of not_gate_32
+
+} {} {}} /home/khq334/361/cmp_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/cmp_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity cmp_n
+-- Compiling architecture behavioral of cmp_n
+
+} {} {}} /home/khq334/361/register_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/register_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_32
+-- Compiling architecture structural of register_32
+
+} {} {}} /home/khq334/361/mux.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/mux.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity mux
+-- Compiling architecture structural of mux
+
+} {} {}} /home/khq334/361/or_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/or_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity or_gate_32
+-- Compiling architecture dataflow of or_gate_32
+
+} {} {}} /home/khq334/361/and_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/and_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity and_gate_32
+-- Compiling architecture dataflow of and_gate_32
+
+} {} {}} /home/khq334/361/xor_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/xor_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate
+-- Compiling architecture dataflow of xor_gate
+
+} {} {}} /home/khq334/361/eecs361.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/eecs361.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling package eecs361
+
+} {} {}} /home/khq334/361/xor_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/xor_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity xor_gate_n
+-- Compiling architecture dataflow of xor_gate_n
+
+} {} {}} /home/khq334/361/nor_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/nor_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity nor_gate
+-- Compiling architecture dataflow of nor_gate
+
+} {} {}} /home/khq334/361/dff.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/dff.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity dff
+-- Compiling architecture behavioral of dff
+
+} {} {}} /home/khq334/361/control.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/control.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity control
+-- Compiling architecture structural of control
+
+} {} {}} /home/khq334/361/nand_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/nand_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate
+-- Compiling architecture dataflow of nand_gate
+
+} {} {}} /home/khq334/361/shift_32_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/shift_32_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity shift_32_test
+-- Compiling architecture structural of shift_32_test
+
+} {} {}} /home/khq334/361/dffr_a.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/dffr_a.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity dffr_a
+-- Compiling architecture behavioral of dffr_a
+
+} {} {}} /home/khq334/361/shift_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/shift_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity shift_32
+-- Compiling architecture structural of shift_32
+
+} {} {}} /home/khq334/361/fulladder.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/fulladder.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Compiling entity fulladder
+-- Compiling architecture structural of fulladder
+
+} {} {}} /home/khq334/361/register_file.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/register_file.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package arraytypes
+-- Compiling entity register_file
+-- Compiling architecture structural of register_file
+
+} {} {}} /home/khq334/361/xnor_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/xnor_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity xnor_gate_n
+-- Compiling architecture dataflow of xnor_gate_n
+
+} {} {}} /home/khq334/361/dff_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/dff_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity dff_32
+-- Compiling architecture structural of dff_32
+
+} {} {}} /home/khq334/361/ALU_32_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/ALU_32_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity alu_32_test
+-- Compiling architecture structural of alu_32_test
+
+} {} {}} /home/khq334/361/syncram.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/syncram.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Loading package numeric_std
+-- Compiling entity syncram
+-- Compiling architecture behavioral of syncram
+
+} {} {}} /home/khq334/361/nand_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/nand_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity nand_gate_n
+-- Compiling architecture dataflow of nand_gate_n
+
+} {} {}} /home/khq334/361/sram_demo.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/sram_demo.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity sram_demo
+-- Compiling architecture structural of sram_demo
+
+} {} {}} /home/khq334/361/mux_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/mux_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity mux_n
+-- Compiling architecture behavioral of mux_n
+
+} {} {}} /home/khq334/361/register_32_test.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/register_32_test.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_32_test
+-- Compiling architecture arch of register_32_test
+
+} {} {}} /home/khq334/361/xnor_gate_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/xnor_gate_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity xnor_gate_32
+-- Compiling architecture dataflow of xnor_gate_32
+
+} {} {}} /home/khq334/361/sram.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/sram.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Loading package numeric_std
+-- Compiling entity sram
+-- Compiling architecture behavioral of sram
+
+} {} {}} /home/khq334/361/dffr_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/dffr_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity dffr_32
+-- Compiling architecture structural of dffr_32
+
+} {} {}} /home/khq334/361/fulladder_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/fulladder_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity fulladder_32
+-- Compiling architecture behavioral of fulladder_32
+
+} {} {}} /home/khq334/361/and_gate_n.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/and_gate_n.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity and_gate_n
+-- Compiling architecture dataflow of and_gate_n
+
+} {} {}} /home/khq334/361/single_cycle.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/single_cycle.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity single_cycle
+-- Compiling architecture structural of single_cycle
+
+} {} {}} /home/khq334/361/rf_muxtree.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/rf_muxtree.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Loading package arraytypes
+-- Compiling entity rf_muxtree
+-- Compiling architecture structural of rf_muxtree
+
+} {} {}} /home/khq334/361/not_gate.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/not_gate.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity not_gate
+-- Compiling architecture dataflow of not_gate
+
+} {} {}} /home/khq334/361/register_r_32.vhd {1 {vcom -work work -2002 -explicit -vopt /home/khq334/361/register_r_32.vhd
+Model Technology ModelSim SE-64 vcom 6.3c Compiler 2007.09 Sep 11 2007
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package eecs361_gates
+-- Loading package eecs361
+-- Compiling entity register_r_32
+-- Compiling architecture structural of register_r_32
+
+} {} {}}

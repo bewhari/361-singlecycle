@@ -1,0 +1,124 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.eecs361.all;
+use work.eecs361_gates.all;
+
+entity ALU_32_test is
+   port (
+       cout: out std_logic;
+       R   : out std_logic_vector(31 downto 0);
+       ovf : out std_logic;
+       zf  : out std_logic
+   );
+end ALU_32_test;
+
+
+architecture structural of ALU_32_test is
+   component ALU_32 
+       port (
+           ctrl: in std_logic_vector(4 downto 0);
+           A   : in std_logic_vector(31 downto 0);
+           B   : in std_logic_vector(31 downto 0);
+           cout: out std_logic;
+           R   : out std_logic_vector(31 downto 0);
+           ovf : out std_logic;
+           zf  : out std_logic
+       );
+   end component;
+   
+   signal Ain: std_logic_vector(31 downto 0);
+   signal Bin: std_logic_vector(31 downto 0);
+   signal ctrlin: std_logic_vector(4 downto 0);
+   
+   
+   begin
+       ALU_32_map: ALU_32 port map (ctrl => ctrlin, A => Ain, B => Bin, cout => cout, R => R, ovf => ovf, zf => zf);
+       
+       test_proc : process
+       begin
+           Ain <= "01010101010101010101010101010101";
+           Bin <= "10001001010110000110100110011010";
+           ctrlin <= "00000";   -- add
+           wait for 5 ns;
+           
+           Ain <= "01010101010101010101010101010101";
+           Bin <= "01000000000000000000100000000000";
+           ctrlin <= "00000";   -- add (overflow)
+           wait for 5 ns;
+           
+           Ain <= "01000000000000000000000000000000";
+           Bin <= "11000000000000000000000000011111";
+           ctrlin <= "00001";   -- addu (with overflow)
+            wait for 5 ns;
+           
+           Ain <= "00100001010100100100000100010001";
+           Bin <= "11011110101011011011111011101111";
+           ctrlin <= "00000";   -- add (zero)
+           wait for 5 ns;
+           
+           Ain <= "01111111111111111111111111111111";
+           Bin <= "00000000100011110001110010000011";
+           ctrlin <= "00010";   -- sub
+           wait for 5 ns;
+           
+           Ain <= "10000000000000000000000000000001";
+           Bin <= "01000000000000000000000000000000";
+           ctrlin <= "00010";   -- sub (overflow)
+           wait for 5 ns;
+                      
+           Ain <= "01010101010101010101010101010101";
+           Bin <= "10000000100000000000000000000011";
+           ctrlin <= "00011";   -- subu (with overflow)
+           wait for 5 ns;
+           
+           Ain <= "10000000000000000000000000000001";
+           Bin <= "10000000000000000000000000000001";
+           ctrlin <= "00010";   -- sub (zero)
+           wait for 5 ns;
+           
+           Ain <= "11111111111111111111111111111111";
+           Bin <= "11011110101011011011111011101111";
+           ctrlin <= "00100";   -- and
+           wait for 5 ns;
+           
+           Ain <= "11011110101011011011111011101111";
+           Bin <= "11111111111111111111111111111111";
+           ctrlin <= "00110";   -- or
+           wait for 5 ns;
+           
+           Ain <= "11011110101011011011111011101111";
+           Bin <= "00000000000000000000000000010000";
+           ctrlin <= "01000";   -- sll (within range)
+           wait for 5 ns;
+           
+           Ain <= "11011110101011011011111011101111";
+           Bin <= "00000000000000000000000100000000";
+           ctrlin <= "01000";   -- sll (out of range)
+           wait for 5 ns;
+           
+           Ain <= "11110000000000000000000000000001";
+           Bin <= "01111111111111111111111111111111";
+           ctrlin <= "10010";   -- slt (true)
+           wait for 5 ns;
+           
+           Ain <= "01000000000000000000000000000001";
+           Bin <= "10000000000000000000000000000000";
+           ctrlin <= "10010";   -- slt (false)
+           wait for 5 ns;
+           
+           Ain <= "00000000000000000000000000000001";
+           Bin <= "11000000000000000000000000000000";
+           ctrlin <= "11010";   -- sltu (true)
+           wait for 5 ns;
+           
+           Ain <= "10000000000000000000000000000001";
+           Bin <= "10000000000000000000000000000000";
+           ctrlin <= "11010";   -- sltu (false)
+           wait for 5 ns;
+           
+           wait;
+      end process;
+   
+end structural; 
+
+
